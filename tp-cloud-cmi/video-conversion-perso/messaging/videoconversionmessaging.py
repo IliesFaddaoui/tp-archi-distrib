@@ -42,7 +42,7 @@ class VideoConversionMessaging(Thread):
 #            self.channel = self.connection.channel()
 #            self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
             if "_CONSUMING_" == self.consuming :
-                method, prop, body = self.channel.basic_get(self.rmq, no_ack=True)
+                method, prop, body = self.channel.basic_get(self.rmq)
                 if body :
                     self._on_message_(body)
                     pass

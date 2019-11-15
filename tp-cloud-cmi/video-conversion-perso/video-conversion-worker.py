@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3.6.8
 
 import logging
 
@@ -13,11 +13,11 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=logging.DEBUG)
     configuration = Configuration()
 
-    #logging.info(configuration.get_rabbitmq_host())
-    #logging.info(configuration.get_rabbitmq_port())
-    #logging.info(configuration.get_messaging_conversion_queue())
-    #logging.info(configuration.get_database_name())
-    #logging.info(configuration.get_video_conversion_collection())
+    logging.info(configuration.get_rabbitmq_host())
+    logging.info(configuration.get_rabbitmq_port())
+    logging.info(configuration.get_messaging_conversion_queue())
+    logging.info(configuration.get_database_name())
+    logging.info(configuration.get_video_conversion_collection())
 
 
     video_unix_socket = VideoConversionUnixSocket()
