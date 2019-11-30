@@ -60,7 +60,7 @@ class VideoConversion(object):
         logging.info("payload = %s", json_payload)
 
         ws = websocket.create_connection(self.url, sslopt={"cert_reqs": ssl.CERT_REQUIRED, "ca_certs" : "ca.cert.pem"})
-#        ws = websocket.create_connection(self.url)
+        # ws = websocket.create_connection(self.url)
         ws.send(json_payload);
         ws.close()
 
