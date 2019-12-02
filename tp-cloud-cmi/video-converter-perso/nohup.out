@@ -1,0 +1,194 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building video-dispatcher 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:1.5.1.RELEASE:run (default-cli) > test-compile @ video-dispatcher >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ video-dispatcher ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ video-dispatcher ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ video-dispatcher ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/tpGiraud/tp-cloud-cmi/video-converter-perso/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ video-dispatcher ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:1.5.1.RELEASE:run (default-cli) < test-compile @ video-dispatcher <<<
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.1.RELEASE:run (default-cli) @ video-dispatcher ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.1.RELEASE)
+
+2019-12-02 11:46:48.123  INFO 27510 --- [           main] e.e.i.ezipflix.frontend.VideoDispatcher  : Starting VideoDispatcher on vm-git with PID 27510 (/home/tpGiraud/tp-cloud-cmi/video-converter-perso/target/classes started by root in /home/tpGiraud/tp-cloud-cmi/video-converter-perso)
+2019-12-02 11:46:48.128  INFO 27510 --- [           main] e.e.i.ezipflix.frontend.VideoDispatcher  : No active profile set, falling back to default profiles: default
+2019-12-02 11:46:48.293  INFO 27510 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec9b65c: startup date [Mon Dec 02 11:46:48 CET 2019]; root of context hierarchy
+2019-12-02 11:46:50.332  INFO 27510 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$643e874f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:46:50.423  INFO 27510 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:46:50.584  INFO 27510 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:46:50.974  INFO 27510 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @9578ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-12-02 11:46:51.112  INFO 27510 --- [           main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 42308
+2019-12-02 11:46:51.120  INFO 27510 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.1.v20170120
+2019-12-02 11:46:51.320  INFO 27510 --- [           main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2019-12-02 11:46:51.320  INFO 27510 --- [           main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2019-12-02 11:46:51.322  INFO 27510 --- [           main] org.eclipse.jetty.server.session         : Scavenging every 600000ms
+2019-12-02 11:46:51.333  INFO 27510 --- [           main] application                              : Initializing Spring embedded WebApplicationContext
+2019-12-02 11:46:51.333  INFO 27510 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3047 ms
+2019-12-02 11:46:51.596  INFO 27510 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-02 11:46:51.602  INFO 27510 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-02 11:46:51.602  INFO 27510 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-02 11:46:51.602  INFO 27510 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-02 11:46:51.602  INFO 27510 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-02 11:46:51.919  INFO 27510 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4e9355aa{/,file:///tmp/jetty-docbase.303562048481717200.42308/,AVAILABLE}
+2019-12-02 11:46:51.919  INFO 27510 --- [           main] org.eclipse.jetty.server.Server          : Started @10530ms
+2019-12-02 11:46:52.365  INFO 27510 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-02 11:46:52.366  INFO 27510 --- [           main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-12-02 11:46:52.575  INFO 27510 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+2019-12-02 11:46:52.604  INFO 27510 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, roundTripTimeNanos=814437}
+2019-12-02 11:46:52.606  INFO 27510 --- [localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-02 11:46:53.015  INFO 27510 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2019-12-02 11:46:53.078  INFO 27510 --- [           main] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped URL path [/video_status] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2019-12-02 11:46:53.585  INFO 27510 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec9b65c: startup date [Mon Dec 02 11:46:48 CET 2019]; root of context hierarchy
+2019-12-02 11:46:53.716  INFO 27510 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public edu.esipe.i3.ezipflix.frontend.ConversionResponse edu.esipe.i3.ezipflix.frontend.VideoDispatcher.requestConversion(edu.esipe.i3.ezipflix.frontend.ConversionRequest) throws com.fasterxml.jackson.core.JsonProcessingException
+2019-12-02 11:46:53.727  INFO 27510 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-02 11:46:53.727  INFO 27510 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-02 11:46:53.782  INFO 27510 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-02 11:46:53.782  INFO 27510 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-02 11:46:53.861  INFO 27510 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-02 11:46:54.308  INFO 27510 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-02 11:46:54.328  INFO 27510 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'connectionFactory' has been autodetected for JMX exposure
+2019-12-02 11:46:54.345  INFO 27510 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'connectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=connectionFactory,type=CachingConnectionFactory]
+2019-12-02 11:46:54.378  INFO 27510 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147482648
+2019-12-02 11:46:54.379  INFO 27510 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-12-02 11:46:54.401  INFO 27510 --- [           main] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-02 11:46:54.401  INFO 27510 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-02 11:46:54.420  INFO 27510 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2019-12-02 11:46:54.449  INFO 27510 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@299bc565{HTTP/1.1,[http/1.1]}{0.0.0.0:42308}
+2019-12-02 11:46:54.450  INFO 27510 --- [           main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 42308 (http/1.1)
+2019-12-02 11:46:54.463  INFO 27510 --- [           main] e.e.i.ezipflix.frontend.VideoDispatcher  : Started VideoDispatcher in 7.053 seconds (JVM running for 13.074)
+2019-12-02 11:49:20.465  INFO 27510 --- [qtp597911194-16] e.e.i.ezipflix.frontend.VideoDispatcher  : File = file:///home/clement/Documents/ING3/tpGiraud/tp-cloud-cmi/video-converter-perso/Game.of.Thrones.S07E07.1080p-intro.mkv
+2019-12-02 11:49:20.467  INFO 27510 --- [qtp597911194-16] e.e.i.ezipflix.frontend.VideoDispatcher  : UUID = f35aa895-59a2-4792-9527-0c060ca8b410
+2019-12-02 11:49:20.558  INFO 27510 --- [qtp597911194-16] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+2019-12-02 11:49:20.737  INFO 27510 --- [qtp597911194-16] o.s.a.r.c.CachingConnectionFactory       : Created new connection: SimpleConnection@71157349 [delegate=amqp://ezip@127.0.0.1:5672/ezip, localPort= 41956]
+2019-12-02 13:30:54.955 ERROR 27510 --- [ 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Channel shutdown: connection error
+2019-12-02 13:32:35.010  WARN 27510 --- [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Connection reset)
+2019-12-02 13:32:40.025 ERROR 27510 --- [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : Caught an exception during connection recovery!
+
+java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:105) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:101) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:353) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.RecoveryAwareAMQConnectionFactory.newConnection(RecoveryAwareAMQConnectionFactory.java:62) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.recoverConnection(AutorecoveringConnection.java:531) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.beginAutomaticRecovery(AutorecoveringConnection.java:494) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.access$000(AutorecoveringConnection.java:53) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection$1.recoveryCanBegin(AutorecoveringConnection.java:435) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.notifyRecoveryCanBeginListeners(AMQConnection.java:693) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.doFinalShutdown(AMQConnection.java:687) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:577) [amqp-client-4.0.1.jar:4.0.1]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:372) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:297) [amqp-client-4.0.1.jar:4.0.1]
+	... 9 common frames omitted
+Caused by: java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:290) ~[na:1.8.0_222]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:571) [amqp-client-4.0.1.jar:4.0.1]
+	... 1 common frames omitted
+
+2019-12-02 13:32:45.042 ERROR 27510 --- [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : Caught an exception during connection recovery!
+
+java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:105) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:101) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:353) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.RecoveryAwareAMQConnectionFactory.newConnection(RecoveryAwareAMQConnectionFactory.java:62) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.recoverConnection(AutorecoveringConnection.java:531) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.beginAutomaticRecovery(AutorecoveringConnection.java:494) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.access$000(AutorecoveringConnection.java:53) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection$1.recoveryCanBegin(AutorecoveringConnection.java:435) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.notifyRecoveryCanBeginListeners(AMQConnection.java:693) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.doFinalShutdown(AMQConnection.java:687) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:577) [amqp-client-4.0.1.jar:4.0.1]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:372) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:297) [amqp-client-4.0.1.jar:4.0.1]
+	... 9 common frames omitted
+Caused by: java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:290) ~[na:1.8.0_222]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:571) [amqp-client-4.0.1.jar:4.0.1]
+	... 1 common frames omitted
+
+2019-12-02 13:45:28.905  INFO 27510 --- [qtp597911194-17] e.e.i.ezipflix.frontend.VideoDispatcher  : File = file:///home/tp-cloud-cmi/video-converter-perso/Game.of.Thrones.S07E07.1080p-intro.mkv
+2019-12-02 13:45:28.911  INFO 27510 --- [qtp597911194-17] e.e.i.ezipflix.frontend.VideoDispatcher  : UUID = 5c6810ab-40f7-48e3-a73f-1f91a123edd8
+2019-12-02 13:47:10.967 ERROR 27510 --- [:0:0:0:0:1:5672] o.s.a.r.c.CachingConnectionFactory       : Channel shutdown: connection error
+2019-12-02 13:47:30.986  WARN 27510 --- [:0:0:0:0:1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Connection reset)
+2019-12-02 13:47:35.993 ERROR 27510 --- [:0:0:0:0:1:5672] c.r.c.impl.ForgivingExceptionHandler     : Caught an exception during connection recovery!
+
+java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:105) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:101) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:353) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.RecoveryAwareAMQConnectionFactory.newConnection(RecoveryAwareAMQConnectionFactory.java:62) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.recoverConnection(AutorecoveringConnection.java:531) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.beginAutomaticRecovery(AutorecoveringConnection.java:494) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection.access$000(AutorecoveringConnection.java:53) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.recovery.AutorecoveringConnection$1.recoveryCanBegin(AutorecoveringConnection.java:435) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.notifyRecoveryCanBeginListeners(AMQConnection.java:693) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.doFinalShutdown(AMQConnection.java:687) [amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:577) [amqp-client-4.0.1.jar:4.0.1]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:372) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:297) [amqp-client-4.0.1.jar:4.0.1]
+	... 9 common frames omitted
+Caused by: java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:290) ~[na:1.8.0_222]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164) ~[amqp-client-4.0.1.jar:4.0.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:571) [amqp-client-4.0.1.jar:4.0.1]
+	... 1 common frames omitted
+
+2019-12-02 13:47:41.545  INFO 27510 --- [qtp597911194-12] e.e.i.ezipflix.frontend.VideoDispatcher  : File = file:///home/partage/tp-cloud-cmi/video-converter-perso/Game.of.Thrones.S07E07.1080p-intro.mkv
+2019-12-02 13:47:41.545  INFO 27510 --- [qtp597911194-12] e.e.i.ezipflix.frontend.VideoDispatcher  : UUID = 026ab30d-2d41-43cc-bf7b-ec06b745f0ad
+2019-12-02 13:53:05.087  INFO 27510 --- [      Thread-19] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec9b65c: startup date [Mon Dec 02 11:46:48 CET 2019]; root of context hierarchy
+2019-12-02 13:53:05.102  INFO 27510 --- [      Thread-19] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-12-02 13:53:05.107  INFO 27510 --- [      Thread-19] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase -2147482648
+2019-12-02 13:53:05.113  INFO 27510 --- [      Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-12-02 13:53:05.113  INFO 27510 --- [      Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-12-02 13:53:05.117  INFO 27510 --- [      Thread-19] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2019-12-02 13:53:05.119  INFO 27510 --- [      Thread-19] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:5}] to localhost:27017 because the pool has been closed.
+2019-12-02 13:53:05.143  INFO 27510 --- [      Thread-19] o.e.jetty.server.AbstractConnector       : Stopped ServerConnector@299bc565{HTTP/1.1,[http/1.1]}{0.0.0.0:42308}
+2019-12-02 13:53:05.144  INFO 27510 --- [      Thread-19] org.eclipse.jetty.server.session         : Stopped scavenging
+2019-12-02 13:53:05.157  INFO 27510 --- [      Thread-19] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2019-12-02 13:53:05.158  INFO 27510 --- [      Thread-19] o.e.jetty.server.handler.ContextHandler  : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@4e9355aa{/,file:///tmp/jetty-docbase.303562048481717200.42308/,UNAVAILABLE}
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 02:06 h
+[INFO] Finished at: 2019-12-02T13:53:05+01:00
+[INFO] Final Memory: 37M/89M
+[INFO] ------------------------------------------------------------------------
