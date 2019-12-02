@@ -20,7 +20,6 @@ class VideoConversion(object):
         self.video_conversion_collection = self.db[_config_.get_video_conversion_collection()]
         self.url = _config_.get_video_status_callback_url()
 
-
     def find_one(self):
         conversion = self.video_conversion_collection.find_one()
         uri = conversion['originPath']
@@ -31,7 +30,7 @@ class VideoConversion(object):
                 outputs={'converted.avi' : '-y -vcodec mpeg4 -b 4000k -acodec mp2 -ab 320k' }
             )
         logging.info("FFMPEG = %s", ff.cmd)
-        # ff.run()
+        ff.run()
         self.video_conversion_collection.update({'_id' : id}, { '$set' : {'targetPath' : 'converted.avi'}})
         self.video_conversion_collection.update({'_id' : id}, { '$set' : {'tstamp' : time.time()  }})
 
@@ -59,8 +58,8 @@ class VideoConversion(object):
         json_payload = json.dumps(payload)
         logging.info("payload = %s", json_payload)
 
-        ws = websocket.create_connection(self.url, sslopt={"cert_reqs": ssl.CERT_REQUIRED, "ca_certs" : "ca.cert.pem"})
-        # ws = websocket.create_connection(self.url)
+        # ws = websocket.create_connection(self.url, sslopt={"cert_reqs": ssl.CERT_REQUIRED, "ca_certs" : "ca.cert.pem"})
+        ws = websocket.create_connection(self.url)
         ws.send(json_payload);
         ws.close()
 

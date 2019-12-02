@@ -9,8 +9,8 @@ spring :
 conversion:
   messaging :
     video-status:
-      url: ws://localhost:42308/video_status
       # url: wss://darkops:42308/video_status
+      url : ws://localhost:42308/video_status
     rabbitmq :
       conversion-exchange: video-conversion-exchange
       conversion-queue: video-conversion-queue
@@ -21,8 +21,8 @@ rabbitmq-server:
   credentials:
     vhost: ezip         # sudo rabbitmqctl add_vhost ezip
                         # sudo rabbitmqctl set_permissions -p ezip ezip ".*" ".*" ".*"
-    username: ezip      # sudo rabbitmqctl add_user ezip pize
-    password: pize
+    username: guest      # sudo rabbitmqctl add_user ezip pize
+    password: guest
 
 
         # return self.configuration_data['conversion']['messaging']['video-status']['url']
