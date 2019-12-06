@@ -25,6 +25,7 @@ class VideoConversionUnixSocket(Thread) :
             _consuming_request = client.recv(1024)
             consuming_request = _consuming_request.decode().strip('\n')
             logging.info("CONSUMING REQUEST = %s", consuming_request)
+            logging.info("client = ", str(client))
             if "_START_" == consuming_request :
                 self.video_messaging.start_consuming()
                 client.send("_START_OK_".encode())
