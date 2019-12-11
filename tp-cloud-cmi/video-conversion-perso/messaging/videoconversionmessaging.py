@@ -25,7 +25,7 @@ class VideoConversionMessaging(Thread):
                                 self.credentials))
         self.channel = self.connection.channel()
         self.rmq = _config_.get_messaging_conversion_queue()
-        # self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
+        # self.channel.basic_consume(self.rmq,self.on_message,auto_ack=True)
         self.converting_service = converting_service
         self.consuming = "_CONSUMING_"
         self.rendez_vous = queue.Queue(1)
@@ -42,18 +42,20 @@ class VideoConversionMessaging(Thread):
             # self.channel = self.connection.channel()
             # self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
             if "_CONSUMING_" == self.consuming :
-                method, prop, body = self.channel.basic_get(self.rmq)
-                print(self.channel.basic_get(self.rmq))
+                method, prop, body = self.channel.basic_get(self.rmq,auto_ack=True)
                 if body :
                     self._on_message_(body)
                     print('body')
-                    pass
+                    print(method)
+                    print(prop)
+                    print(body)
                 else :
                     try :
                         self.pause.get(timeout=1)
                     except queue.Empty :
                         pass
                     # self._on_message_(message)
+
 
 
     def on_message(self, channel, method_frame, header_frame, body):
