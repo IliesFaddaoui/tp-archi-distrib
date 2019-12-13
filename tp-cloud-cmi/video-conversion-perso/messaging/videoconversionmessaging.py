@@ -25,7 +25,7 @@ class VideoConversionMessaging(Thread):
                                 self.credentials))
         self.channel = self.connection.channel()
         self.rmq = _config_.get_messaging_conversion_queue()
-        # self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
+        # self.channel.basic_consume(self.rmq,self.on_message,auto_ack=True)
         self.converting_service = converting_service
         self.consuming = "_CONSUMING_"
         self.rendez_vous = queue.Queue(1)
@@ -33,19 +33,22 @@ class VideoConversionMessaging(Thread):
         self.start()
 
     def run(self):
-        while True : # "_CONSUMING_" == self.consuming :
-#            logging.info("Starts consuming on message bus before RDV")
-#            self.channel.start_consuming()
-#            logging.info("WAITING Rendez-Vous")
-#            self.rendez_vous.get()
-#            logging.info("Rendez-Vous")
-#            self.channel = self.connection.channel()
-#            self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
+        while True: #"_CONSUMING_" == self.consuming :
+            # logging.info("Starts consuming on message bus before RDV")
+            # self.channel.start_consuming()
+            # logging.info("WAITING Rendez-Vous")
+            # self.rendez_vous.get()
+            # logging.info("Rendez-Vous")
+            # self.channel = self.connection.channel()
+            # self.channel.basic_consume(self.on_message, self.rmq, no_ack=True)
             if "_CONSUMING_" == self.consuming :
-                method, prop, body = self.channel.basic_get(self.rmq)
+                method, prop, body = self.channel.basic_get(self.rmq,auto_ack=True)
                 if body :
                     self._on_message_(body)
-                    pass
+                    print('body')
+                    print(method)
+                    print(prop)
+                    print(body)
                 else :
                     try :
                         self.pause.get(timeout=1)
@@ -54,11 +57,12 @@ class VideoConversionMessaging(Thread):
                     # self._on_message_(message)
 
 
+
     def on_message(self, channel, method_frame, header_frame, body):
         logging.info(body)
         # logging.info('id = %s, URI = %s', body["id"], body['originPath'])
         # logging.info('URI = %s', body['originPath'])
-        logging.info('URI = %s', body.decode())
+        # logging.info('URI = %s', body.decode())
         convert_request = json.loads(body.decode())
         logging.info(convert_request)
         self.converting_service.convert(convert_request["id"], convert_request['originPath'])
@@ -67,7 +71,7 @@ class VideoConversionMessaging(Thread):
         logging.info(body)
         # logging.info('id = %s, URI = %s', body["id"], body['originPath'])
         # logging.info('URI = %s', body['originPath'])
-        logging.info('URI = %s', body.decode())
+        # logging.info('URI = %s', body.decode())
         convert_request = json.loads(body.decode())
         logging.info(convert_request)
         self.converting_service.convert(convert_request["id"], convert_request['originPath'])
